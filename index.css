@@ -1,6 +1,6 @@
 @import url('https://rsms.me/inter/inter.css');
 
-html {
+* {
     font-family: 'Inter', sans-serif !important;
 }
 
@@ -12,6 +12,6 @@ html {
 
 @layer utilities {
     .navbar-list {
-        @apply hover:bg-darkcyan hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300;
+        @apply hover: bg-darkcyan hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300;
     }
 }
