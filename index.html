@@ -13,7 +13,21 @@
                     colors: {
                         darkslategray: '#005555',
                         darkcyan: '#069A8E',
-                        powerblue: '#A1E3D8'
+                        powerblue: '#A1E3D8',
+
+                        navbar: "#f9fafb",
+                        navtext: "#333333",
+
+
+                        background1: "#e5e4df",
+                        background2: "#e5e4df",
+                        backgroundname: "black",
+                        backgroundtitle: "#333333",
+                        backgroundnamecolor: "#f9fafb",
+
+
+                        subnavcolor: "#333333",
+                        subnavtext: "#f9fafb"
                     }
                 }
             }
@@ -24,39 +38,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Document</title>
 </head>
-
-<body>
+<body onload="load()">
     <div class="antialiased tracking-wide">
         <nav>
             <div id="navbar"
-                class="flex flex-row fixed z-50 inset-x-0 top-0 justify-between transition-[height] h-[50px] duration-300 overflow-hidden items-center px-5 shadow bg-white">
-                <div class="text-darkslategray text-xl font-bold tracking-wide">Patrick Mahinay</div>
-                <div class="text-darkslategray text-md font-bold tracking-wide">
+                class="flex flex-row fixed z-50 inset-x-0 top-0 justify-between px-20 transition-[height] h-[50px] duration-300 overflow-hidden items-center px-5 shadow bg-navbar">
+                <div class="text-navtext text-xl font-semibold tracking-wide">Patrick Mahinay</div>
+                <div class="text-navtext text-md font-bold tracking-wide">
                     <ul class="flex flex-row gap-6 cursor-pointer">
                         <a href="#aboutme"
-                            class="hover:bg-darkcyan hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                            class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
                             About me</a>
                         <a href="#experience"
-                            class="hover:bg-darkcyan hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                            class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
                             Experience
                         </a>
                         <a href="#technical-skill"
-                            class="hover:bg-darkcyan hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                            class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
                             Skills
                         </a>
                     </ul>
                 </div>
             </div>
-            <div class="flex flex-col gap-10 bg-gradient-to-r from-darkslategray to-darkcyan min-h-screen">
+            <div class="flex flex-col gap-10 bg-gradient-to-r from-background1 to-background2 min-h-screen">
                 <div class="grow flex flex-col gap-5 justify-center items-center">
-                    <div class="text-6xl text-white font-bold animate__animated animate__bounce">Hi There!</div>
-                    <div class="text-3xl text-white font-bold animate__animated animate__backInLeft">
-                        Im <span class="text-4xl text-powerblue drop-shadow-md">Patrick Mahinay</span> from Caloocan
+                    <div class="text-6xl text-backgroundtitle font-bold animate__animated animate__bounce">Hi There!
+                    </div>
+                    <div class="text-3xl text-backgroundtitle font-bold animate__animated animate__backInLeft">
+                        Im <span class="text-4xl text-backgroundname">Patrick Mahinay</span> from Caloocan
                         City.
                     </div>
+                    <div class="flex flex-row gap-4">
+                        <div> <img class="h-10 w-13 grayscale hover:cursor-pointer hover:grayscale-0"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
+                                alt="linkedin" /></div>
+                        <div> <img class="h-10 w-13 grayscale hover:cursor-pointer hover:grayscale-0"
+                                src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" /></div>
+                        <div> <img class="h-10 w-13 grayscale hover:cursor-pointer hover:grayscale-0"
+                                src="https://static-00.iconduck.com/assets.00/gitlab-icon-2048x1885-1o0cwkbx.png"
+                                alt="React" /></div>
+
+                    </div>
                     <div
-                        class="text-xl text-darkslategray bg-white p-2 rounded-md font-bold hover:shadow-lg animate__animated animate__backInLeft">
-                        <span class="tracking-wide bg-powerblue px-5 py-1 rounded">Web Developer</span>
+                        class="text-lg text-backgroundtitle p-5 rounded-md font-semibold animate__animated animate__backInLeft">
+                        <span class="tracking-wide bg-backgroundnamecolor px-5 py-4 rounded">Web Developer</span>
                     </div>
                 </div>
             </div>
@@ -65,36 +90,26 @@
             <div class="flex flex-col bg-white min-h-screen">
                 <div class="sticky top-0 z-20">
                     <blockquote>
-                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-darkcyan
+                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
                         relative items-center inline-block rounded-lg py-3 px-36 ">
-                            <span class="relative text-white text-xl font-bold">About Me</span>
+                            <span class="relative text-subnavtext text-xl font-semibold">About Me</span>
                         </span>
                     </blockquote>
                 </div>
-                <div class="grow flex flex-col lg:flex-row gap-5 items-center animate__animated animate__fadeInUp">
-                    <div class="basis-9/12 mx-20 flex flex-col gap-5 justify-center items-center">
-                        <img class="z-0 bg-cover h-52 w-auto rounded-full shadow-lg" alt="Patrick Mahinay"
-                            src="https://scontent.fmnl8-3.fna.fbcdn.net/v/t39.30808-6/336261785_558238986287226_4195469554916045032_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGSzMQCLIhM-GofeM7XykGOIQogl_BbCZUhCiCX8FsJlVeLNQYbmnSAaUqSwvoygRpaTPx3ZMz9z2Gq-9SE6BbF&_nc_ohc=ETCHQgWvr5EAX9VeGAG&_nc_ht=scontent.fmnl8-3.fna&oh=00_AfCOmhb1lioVJ7Mj9Mk8KITKVy9AMpiCjroMdxmYpexUrQ&oe=64442A54" />
+                <div class="grow flex flex-col lg:flex-row gap-1 items-center animate__animated animate__fadeInUp">
+                    <div class="basis-8/12 mx-10 flex flex-col gap-5 justify-center items-center">
+                        <img class="z-0 bg-cover h-40 w-auto rounded-full shadow-lg" alt="Patrick Mahinay"
+                            src="https://res.cloudinary.com/ddr0lfrjj/image/upload/v1687833023/me_ged5tw.jpg" />
                     </div>
-                    <div class="grow flex flex-col gap-2 text-lg text-gray-700 font-semibold px-10">
-                        <!-- <p class="break-normal mb-2">
-                            Hello, I am <span class="text-cyan-800">Patrick</span> , a Web
-                            Developer from Caloocan,
-                            Philippines. I am a
-                            college graduate from Global Reciprocal Colleges, Manila where I took up a degree in
-                            Bachelor of
-                            Science
-                            in Information and Communications Technology and is interested to pursue a long-term career
-                            in
-                            the IT industry.</p> -->
-                        <p class="break-normal text-sm font-medium"> My interest in designing and developing user
-                            interfaces is what drove
-                            me to be a Front End
-                            Web
-                            Developer. I have a basic understanding of color combinations, basic photo editing and I
-                            ensure
-                            to produce high-quality Websites with Responsive Web Design that can be accessed on any
-                            devices.</p>
+                    <div class="grow flex flex-col gap-2 text-md text-gray-600 font-medium px-10 rounded-lg p-5">
+                        My interest in designing and developing user
+                        interfaces is what drove
+                        me to be a Front End
+                        Web
+                        Developer. I have a basic understanding of color combinations, basic photo editing and I
+                        ensure
+                        to produce high-quality Websites with Responsive Web Design that can be accessed on any
+                        devices.</p>
                     </div>
                 </div>
             </div>
@@ -103,18 +118,18 @@
             <div class="min-h-screen">
                 <div class="sticky top-0 z-20">
                     <blockquote>
-                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-darkcyan
+                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
                         relative items-center inline-block rounded-lg py-3 px-36">
-                            <span class="relative text-white text-xl font-bold">Work Experience</span>
+                            <span class="relative text-subnavtext text-xl font-semibold">Work Experience</span>
                         </span>
                     </blockquote>
                 </div>
                 <div class="flex flex-col px-5 lg:px-20 py-5 animate__animated animate__fadeInUp">
                     <div class="flex flex-col bg-white rounded-lg text-left gap-3 p-5">
-                        <div class="text-2xl lg:text-3xl text-gray-800 font-bold">Xypher Solutions Inc <small
-                                class="text-lg">(QuezonCity)</small></div>
-                        <div class="text-lg font-semibold text-cyan-800">Junior Front End Developer </div>
-                        <div class="bg-gray-100 rounded-md p-5 text-gray-700">
+                        <div class="text-2xl lg:text-3xl text-gray-900 font-semibold">Xypher Solutions Inc <small
+                                class="text-lg">(Quezon City)</small></div>
+                        <div class="text-lg font-semibold text-gray-800">Junior Front End Developer </div>
+                        <div class="bg-gray-50 rounded-md p-5 text-gray-800">
                             <ul>
                                 <li> - Performed code optimization and maintained code quality.</li>
                                 <li> - Performed code standard and code based architecture.</li>
@@ -128,10 +143,11 @@
                         </div>
                     </div>
                     <div class="flex flex-col bg-white rounded-lg text-left p-5 gap-3">
-                        <div class="text-2xl lg:text-3xl text-gray-800 font-bold">You Source Inc <small class="text-lg">(Makati
+                        <div class="text-2xl lg:text-3xl text-gray-900 font-semibold">You Source Inc <small
+                                class="text-lg">(Makati
                                 City)</small></div>
-                        <div class="text-lg font-semibold text-cyan-800">Software Engineer Intern</div>
-                        <div class="bg-gray-100 rounded-md p-5 text-gray-700">
+                        <div class="text-lg font-semibold text-gray-800">Software Engineer Intern</div>
+                        <div class="bg-gray-50 rounded-md p-5 text-gray-800">
                             <ul>
                                 <li>- Worked with a team of software developers responsible for designing, programming
                                     and
@@ -153,103 +169,116 @@
             </div>
         </section>
         <section id="technical-skill">
-            <div class="flex flex-col min-h-screen rounded-lg">
+            <div class="flex flex-col min-h-screen rounded-lg bg-gray-50">
                 <div class="sticky top-0 z-20">
                     <blockquote>
-                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-darkcyan
+                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
                         relative items-center inline-block rounded-lg py-3 px-36">
-                            <span class="relative text-white text-xl font-bold">Technical Skills</span>
+                            <span class="relative text-subnavtext text-xl font-semibold">Skills</span>
                         </span>
                     </blockquote>
                 </div>
                 <div
-                    class="grow flex flex-col justify-center gap-4 bg-white rounded-lg shadow-sm text-left px-5 lg:px-20 py-5 animate__animated animate__fadeInUp">
-                    <div class="text-xl text-white font-bold bg-gradient-to-r from-cyan-500 to-blue-500 p-2 rounded">
+                    class="bg-gray-200 bg-opacity-0 grow flex flex-col justify-center gap-4 bg-white rounded-lg shadow-sm text-left px-32 py-5 animate__animated animate__fadeInUp">
+                    <div class="text-xl text-gray-900 font-bold p-2 rounded">
                         Front End Development</div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15" src="https://assets.stickpng.com/thumbs/584830f5cef1014c0b5e4aa1.png"
+                            <img class="h-14 w-15 hover:grayscale"
+                                src="https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_168875.png"
                                 alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">React</span>
+                            <span class="ml-3 text-gray-800 text-sm font-semibold">React / React Native</span>
                         </div>
                         <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15"
+                            <img class="h-14 w-15 hover:grayscale "
                                 src="https://icons-for-free.com/iconfiles/png/512/vscode+icons+type+tailwind-1324451500323172563.png"
                                 alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Tailwind CSS</span>
+                            <span class="ml-3 text-gray-800 text-sm font-semibold">Tailwind CSS</span>
                         </div>
                         <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15"
+                            <img class="h-14 w-15 hover:grayscale "
                                 src="https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-svg-vector.svg"
                                 alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Angular JS</span>
+                            <span class="ml-3 text-gray-800 text-sm font-semibold">Angular JS</span>
                         </div>
                         <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15" src="https://cdn-icons-png.flaticon.com/512/732/732212.png"
-                                alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">HTML 5</span>
+                            <img class="h-14 w-15 hover:grayscale "
+                                src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="React" />
+                            <span class="ml-3 text-gray-800 text-sm font-semibold">HTML 5</span>
                         </div>
                         <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15"
+                            <img class="h-14 w-15 hover:grayscale "
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
                                 alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Typescript</span></span>
+                            <span class="ml-3 text-gray-800 text-sm font-semibold">Typescript</span></span>
                         </div>
                         <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15" src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
-                                alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Bootstrap</span></span>
+                            <img class="h-14 w-15 hover:grayscale "
+                                src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="React" />
+                            <span class="ml-3 text-gray-800 text-sm font-semibold">Bootstrap</span></span>
+                        </div>
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-14 w-15 hover:grayscale " src="https://mui.com/static/logo.png" alt="React" />
+                            <span class="ml-3 text-gray-800 text-sm font-semibold">Material UI</span></span>
                         </div>
                     </div>
+                    <div class="border-b-1 border-dashed">
+                        <div class="text-xl text-gray-900 font-bold p-2 rounded">
+                            Back End Development</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-2">
+                            <div
+                                class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                                <img class="h-14 w-15 hover:grayscale "
+                                    src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.png" alt="React" />
+                                <span class="ml-3 text-gray-800 text-sm font-semibold">Express</span>
+                            </div>
+                            <div
+                                class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                                <img class="h-14 w-15 hover:grayscale "
+                                    src="https://styles.redditmedia.com/t5_2qm6k/styles/communityIcon_dhjr6guc03x51.png"
+                                    alt="React" />
+                                <span class="ml-3 text-gray-800 text-sm font-semibold">MySql</span>
+                            </div>
+                            <div
+                                class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                                <img class="h-14 w-15 hover:grayscale "
+                                    src="https://www.svgrepo.com/show/331488/mongodb.svg" alt="React" />
+                                <span class="ml-3 text-gray-800 text-sm font-semibold">MongoDB
+                                    <small>(Basics)</small></span>
+                            </div>
+                        </div>
 
-                    <div class="text-xl text-white font-bold bg-gradient-to-r from-violet-500 to-rose-500 p-2 rounded">
-                        Back End Development</div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-2">
-                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15" src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.png"
-                                alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Express</span>
-                        </div>
-                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15"
-                                src="https://styles.redditmedia.com/t5_2qm6k/styles/communityIcon_dhjr6guc03x51.png"
-                                alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">MySql</span>
-                        </div>
-                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15" src="https://www.svgrepo.com/show/331488/mongodb.svg" alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">MongoDB
-                                <small>(Basics)</small></span>
-                        </div>
-                    </div>
-
-                    <div class="text-xl text-white font-bold bg-gradient-to-r from-orange-500 to-amber-400 p-2 rounded">
-                        Other Tools</div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15" src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png"
-                                alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Linux</span>
-                        </div>
-                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-                                alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Git</span>
-                        </div>
-                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15"
-                                src="https://yt3.googleusercontent.com/iD0oePTGV8tZwEEP_WEG2rvyNiQAVfmjhawFMCj17ARjjmw-J70k9NDjSE5QTzD9Vk3ayBU=s900-c-k-c0x00ffffff-no-rj"
-                                alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Cypress</span>
-                        </div>
-                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
-                            <img class="h-10 w-15"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Circleci-icon-logo.svg/1200px-Circleci-icon-logo.svg.png"
-                                alt="React" />
-                            <span class="ml-3 text-gray-700 text-sm font-bold">Circle CI</span>
+                        <div class="text-xl text-gray-900 font-bold p-2 rounded">
+                            Other Tools</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div
+                                class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                                <img class="h-14 w-15 hover:grayscale "
+                                    src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="React" />
+                                <span class="ml-3 text-gray-800 text-sm font-semibold">Linux</span>
+                            </div>
+                            <div
+                                class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                                <img class="h-14 w-15 hover:grayscale "
+                                    src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="React" />
+                                <span class="ml-3 text-gray-800 text-sm font-semibold">Git</span>
+                            </div>
+                            <div
+                                class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                                <img class="h-14 w-15 hover:grayscale "
+                                    src="https://yt3.googleusercontent.com/iD0oePTGV8tZwEEP_WEG2rvyNiQAVfmjhawFMCj17ARjjmw-J70k9NDjSE5QTzD9Vk3ayBU=s900-c-k-c0x00ffffff-no-rj"
+                                    alt="React" />
+                                <span class="ml-3 text-gray-800 text-sm font-semibold">Cypress</span>
+                            </div>
+                            <div
+                                class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                                <img class="h-14 w-15 hover:grayscale "
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Circleci-icon-logo.svg/1200px-Circleci-icon-logo.svg.png"
+                                    alt="React" />
+                                <span class="ml-3 text-gray-800 text-sm font-semibold">Circle CI</span>
+                            </div>
                         </div>
                     </div>
-                </div>
         </section>
     </div>
     </div>
@@ -261,6 +290,7 @@
     var scrollView = 0;
 
 
+
     window.onscroll = function () {
         console.log("window.pageYOffset", window.pageYOffset)
         if (scrollView > window.pageYOffset && window.pageYOffset < 550) {
@@ -270,10 +300,12 @@
             console.log("scrolling down");
             document.getElementById("navbar").style.height = "0"
         }
-
         return scrollView = window.pageYOffset
-
     };
+
+    function load() {
+        alert("Page is loaded");
+    }
 
     function scrollFunction() {
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) return document.getElementById("navbar").style.display = "none";
