@@ -27,6 +27,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .newtons-cradle {
     --uib-size: 50px;
     --uib-speed: 1.2s;

@@ -41,11 +41,15 @@
 
 <body>
     <div class="antialiased tracking-wide">
+        <!-- Navbar -->
         <nav>
             <div id="navbar"
-                class="flex flex-row fixed z-50 inset-x-0 top-0 justify-between px-20 transition-[height] h-[50px] duration-300 overflow-hidden items-center px-5 shadow bg-navbar">
-                <div class="text-navtext text-1xl font-bold tracking-wide">PatrickG</div>
-                <div class="text-navtext text-sm font-bold tracking-wide">
+                class="flex flex-row fixed z-50 inset-x-0 top-0 justify-between px-20 transition-[height] h-[50px] duration-300 overflow-hidden items-center px-5 shadow bg-navbar animate__animated animate__slideInDown">
+
+
+                <div class="text-navtext text-2xl font-bold tracking-wide">PatrickG.</div>
+
+                <div class="text-navtext text-sm font-bold tracking-wide ">
                     <ul class="flex flex-row gap-6 cursor-pointer">
                         <a href="#aboutme"
                             class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
@@ -73,7 +77,7 @@
                         Im <span class="text-4xl text-backgroundname">Patrick Mahinay</span> from Caloocan
                         City.
                     </div>
-                    <div class="flex flex-row gap-4">
+                    <div class="flex flex-row gap-4 animate__animated animate__fadeIn">
                         <div> <img class="h-10 w-13 grayscale hover:cursor-pointer hover:grayscale-0"
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
                                 alt="linkedin" /></div>
@@ -90,18 +94,19 @@
                 </div>
             </div>
         </nav>
+        <!-- About Me  -->
         <section id="aboutme">
             <div class="flex flex-col bg-white min-h-screen">
                 <div class="sticky top-0 z-20">
                     <blockquote>
                         <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
-                        relative items-center inline-block rounded-lg py-3 px-36 ">
-                            <span class="relative text-subnavtext text-xl font-semibold">About Me</span>
+                        relative shadow-xl items-center inline-block rounded-lg py-3 px-36 ">
+                            <span class="relative text-subnavtext text-lg font-semibold">About Me</span>
                         </span>
                     </blockquote>
                 </div>
                 <div
-                    class="grow flex flex-col lg:flex-col gap-1 items-center justify-center animate__animated animate__fadeInUp">
+                    class="grow flex flex-col lg:flex-col gap-1 items-center justify-center animate__animated animate__fadeIn">
                     <div class="mx-10 flex flex-col gap-5 justify-center items-center">
                         <img class="z-0 bg-cover h-40 w-auto rounded-full shadow-lg" alt="Patrick Mahinay"
                             src="https://res.cloudinary.com/ddr0lfrjj/image/upload/v1687833023/me_ged5tw.jpg" />
@@ -121,75 +126,19 @@
                 </div>
             </div>
         </section>
-        <section id="experience">
-            <div class="min-h-screen">
-                <div class="sticky top-0 z-20">
-                    <blockquote>
-                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
-                        relative items-center inline-block rounded-lg py-3 px-36">
-                            <span class="relative text-subnavtext text-xl font-semibold">Work Experience</span>
-                        </span>
-                    </blockquote>
-                </div>
-                <div class="flex flex-col px-5 lg:px-20 py-5 animate__animated animate__fadeInUp">
-                    <div class="flex flex-col bg-white rounded-lg text-left gap-3 p-5">
-                        <div class="text-lg text-gray-900 font-bold">Xypher Solutions Inc <small class="text-lg">(Quezon
-                                City)</small></div>
-                        <div class="text-md font-semibold text-gray-800">Junior Front End Developer </div>
-                        <div class="bg-gray-50 rounded-md p-5 text-gray-800">
-                            <ul>
-                                <li class="text-sm"> - Performed code optimization and maintained code quality.</li>
-                                <li class="text-sm"> - Performed code standard and code based architecture.</li>
-                                <li class="text-sm"> - Performed UI Design and Frontend development.</li>
-                                <li class="text-sm"> - Experience working on agile-oriented environment.</li>
-                                <li class="text-gray-800 font-semibold mt-2 text-sm"> Tech Stack: React JS, React
-                                    Native, JavaScript,
-                                    Redux,
-                                    Tailwind
-                                    CSS,
-                                    Node JS.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="flex flex-col bg-white rounded-lg text-left p-5 gap-3">
-                        <div class="text-xl text-gray-900 font-bold">You Source Inc <small class="text-lg">(Makati
-                                City)</small></div>
-                        <div class="text-md font-semibold text-gray-800">Software Engineer Intern</div>
-                        <div class="bg-gray-50 rounded-md p-5 text-gray-800">
-                            <ul>
-                                <li class="text-sm">- Worked with a team of software developers responsible for
-                                    designing, programming
-                                    and
-                                    unit testing.</li>
-                                <li class="text-sm">- Develop a series of html form that stores information of a end
-                                    user on a web
-                                    server.
-                                </li>
-                                <li class="text-sm">- Performed Unit testing during the development of an application.
-                                </li>
-                                <li class="text-sm">- Experience working in an agile-oriented environment.</li>
-                                <li class="text-gray-800 font-semibold text-sm mt-2">Tech Stack: AngularJS,
-                                    Typescript,Coffee
-                                    Script,
-                                    HTML, CSS</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Skills  -->
         <section id="technical-skill">
             <div class="flex flex-col min-h-screen rounded-lg bg-gray-50">
                 <div class="sticky top-0 z-20">
                     <blockquote>
                         <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
-                        relative items-center inline-block rounded-lg py-3 px-36">
-                            <span class="relative text-subnavtext text-xl font-semibold">Skills</span>
+                        relative shadow-xl items-center inline-block rounded-lg py-3 px-36">
+                            <span class="relative text-subnavtext text-lg font-semibold">Skills</span>
                         </span>
                     </blockquote>
                 </div>
                 <div
-                    class="bg-gray-200 bg-opacity-0 grow flex flex-col items-center gap-4 bg-white rounded-lg shadow-sm text-left px-20 py-10 animate__animated animate__fadeInUp">
+                    class="bg-gray-200 bg-opacity-0 grow flex flex-col items-center gap-4 bg-white rounded-lg shadow-sm text-left px-20 py-10 animate__animated animate__fadeIn">
                     <div class="text-2xl text-gray-900 font-bold p-2 rounded">
                         Front End Development</div>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -296,26 +245,85 @@
                         </div>
                     </div>
         </section>
+        <!-- Work Experience  -->
+        <section id="experience">
+            <div class="min-h-screen">
+                <div class="sticky top-0 z-20">
+                    <blockquote>
+                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
+                                relative shadow-xl items-center inline-block rounded-lg py-3 px-36">
+                            <span class="relative text-subnavtext text-lg font-semibold">Work Experience</span>
+                        </span>
+                    </blockquote>
+                </div>
+                <div class="flex flex-col px-5 lg:px-20 py-5 animate__animated animate__fadeIn">
+                    <div class="flex flex-col bg-white rounded-lg text-left gap-3 p-5">
+                        <div class="text-lg text-gray-900 font-bold">Xypher Solutions Inc <small class="text-lg">(Quezon
+                                City)</small></div>
+                        <div class="text-md font-semibold text-gray-800">Junior Front End Developer </div>
+                        <div class="bg-gray-50 rounded-md p-5 text-gray-800">
+                            <ul>
+                                <li class="text-sm"> - Performed code optimization and maintained code quality.</li>
+                                <li class="text-sm"> - Performed code standard and code based architecture.</li>
+                                <li class="text-sm"> - Performed UI Design and Frontend development.</li>
+                                <li class="text-sm"> - Experience working on agile-oriented environment.</li>
+                                <li class="text-gray-800 font-semibold mt-2 text-sm"> Tech Stack: React JS, React
+                                    Native, JavaScript,
+                                    Redux,
+                                    Tailwind
+                                    CSS,
+                                    Node JS.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white rounded-lg text-left p-5 gap-3">
+                        <div class="text-xl text-gray-900 font-bold">You Source Inc <small class="text-lg">(Makati
+                                City)</small></div>
+                        <div class="text-md font-semibold text-gray-800">Software Engineer Intern</div>
+                        <div class="bg-gray-50 rounded-md p-5 text-gray-800">
+                            <ul>
+                                <li class="text-sm">- Worked with a team of software developers responsible for
+                                    designing, programming
+                                    and
+                                    unit testing.</li>
+                                <li class="text-sm">- Develop a series of html form that stores information of a end
+                                    user on a web
+                                    server.
+                                </li>
+                                <li class="text-sm">- Performed Unit testing during the development of an application.
+                                </li>
+                                <li class="text-sm">- Experience working in an agile-oriented environment.</li>
+                                <li class="text-gray-800 font-semibold text-sm mt-2">Tech Stack: AngularJS,
+                                    Typescript,Coffee
+                                    Script,
+                                    HTML, CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects  -->
         <section id="projects">
             <div class="min-h-screen">
                 <div class="sticky top-0 z-20">
                     <blockquote>
                         <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
-                        relative items-center inline-block rounded-lg py-3 px-36">
-                            <span class="relative text-subnavtext text-xl font-semibold">Projects</span>
+                                relative shadow-xl items-center inline-block rounded-lg py-3 px-36">
+                            <span class="relative text-subnavtext text-lg font-semibold">Projects</span>
                         </span>
                     </blockquote>
                 </div>
                 <div class="grid grid-cols-4 gap-4 p-20 justify-center">
                     <a href="#"
-                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 hover:shadow-md dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Covid App Ph
                         </h3>
-                        <div class="flex flex-row">
-                            <img class="rounded-md shadow w-20"
+                        <div class="flex flex-row h-40">
+                            <img class="object-scale-down rounded-md shadow"
                                 src="https://github.com/rams031/CovidSafePh-App/blob/master/components/test.jpg?raw=true"
                                 alt="first">
-                            <img class="rounded-md shadow w-20"
+                            <img class="object-scale-down rounded-md shadow"
                                 src="https://github.com/rams031/CovidSafePh-App/blob/master/components/test2.jpg?raw=true"
                                 alt="second">
                         </div>
@@ -325,15 +333,17 @@
                             COVID-19 pandemic with news feature and health reminders.</p>
                     </a>
                     <a href="#"
-                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Agency
                             Scheduling System</h3>
-                        <img class="rounded-md shadow"
-                            src="https://github.com/rams031/Agency-Scheduling-System-with-Email-Updates-/blob/master/assets/images/display1.png?raw=true"
-                            alt="first">
-                        <img class="rounded-md shadow pt-1"
-                            src="https://github.com/rams031/Agency-Scheduling-System-with-Email-Updates-/blob/master/assets/images/display2.png?raw=true"
-                            alt="first">
+                        <div class="h-40">
+                            <img class="object-cover rounded-md shadow"
+                                src="https://github.com/rams031/Agency-Scheduling-System-with-Email-Updates-/blob/master/assets/images/display1.png?raw=true"
+                                alt="first">
+                            <!-- <img class=" object-scale-down rounded-md shadow pt-1"
+                                        src="https://github.com/rams031/Agency-Scheduling-System-with-Email-Updates-/blob/master/assets/images/display2.png?raw=true"
+                                        alt="first"> -->
+                        </div>
                         <p class="font-normal text-xs text-gray-700 dark:text-gray-400 pt-4"><span
                                 class="font-semibold">Software Engineering
                                 Thesis.</span> This System is made for agency company Main Function is to provide
@@ -341,15 +351,17 @@
                             multiple applicant with email function to keep applicant updated</p>
                     </a>
                     <a href="#"
-                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Agency
                             Barangay Medical Inventory System</h3>
-                        <img class="rounded-md shadow"
-                            src="https://res.cloudinary.com/ddr0lfrjj/image/upload/v1687851761/barangay1_qfapre.png"
-                            alt="first">
-                        <img class="rounded-md shadow pt-1"
-                            src="https://res.cloudinary.com/ddr0lfrjj/image/upload/v1687851761/barangay2_y7wuho.png"
-                            alt="first">
+                        <div class="h-40">
+                            <img class="rounded-md shadow"
+                                src="https://res.cloudinary.com/ddr0lfrjj/image/upload/v1687851761/barangay1_qfapre.png"
+                                alt="first">
+                            <!-- <img class="rounded-md shadow pt-1"
+                                    src="https://res.cloudinary.com/ddr0lfrjj/image/upload/v1687851761/barangay2_y7wuho.png"
+                                    alt="first"> -->
+                        </div>
                         <p class="font-normal text-xs text-gray-700 dark:text-gray-400 pt-4"><span
                                 class="font-semibold">Inventory System.</span> The Main Purpose of this system is
                             to provice exact data of exisiting inventory of medical product.</p>
@@ -357,7 +369,6 @@
                 </div>
             </div>
         </section>
-    </div>
     </div>
 </body>
 
