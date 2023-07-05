@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Mahinay</title>
+
+    <link rel="icon" href="./assets/pg-logo.png" type="image/x-icon">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -14,18 +19,13 @@
                         darkslategray: '#005555',
                         darkcyan: '#069A8E',
                         powerblue: '#A1E3D8',
-
                         navbar: "#f9fafb",
                         navtext: "#333333",
-
-
                         background1: "#e5e4df",
                         background2: "#e5e4df",
                         backgroundname: "black",
                         backgroundtitle: "#333333",
                         backgroundnamecolor: "#f9fafb",
-
-
                         subnavcolor: "#333333",
                         subnavtext: "#f9fafb"
                     }
@@ -33,8 +33,10 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" />
+
+
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Document</title>
 </head>
@@ -43,27 +45,64 @@
     <div class="antialiased tracking-wide">
         <!-- Navbar -->
         <nav>
-            <div id="navbar"
-                class="flex flex-row fixed z-50 inset-x-0 top-0 justify-between px-20 transition-[height] h-[50px] duration-300 overflow-hidden items-center px-5 shadow bg-navbar animate__animated animate__slideInDown">
-                <div class="text-navtext text-2xl font-bold tracking-wide">PatrickG.</div>
-                <div class="text-navtext text-sm font-bold tracking-wide ">
-                    <ul class="flex flex-row gap-6 cursor-pointer">
-                        <a href="#aboutme"
-                            class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
-                            About me</a>
-                        <a href="#experience"
-                            class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
-                            Experience
-                        </a>
-                        <a href="#technical-skill"
-                            class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
-                            Skills
-                        </a>
-                        <a href="#projects"
-                            class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
-                            Project
-                        </a>
+            <div x-data="{ open: false }">
+                <div id="navbar"
+                    class="flex flex-row fixed z-50 inset-x-0 top-0 justify-between px-20 transition-[height] h-[50px] duration-300 overflow-hidden items-center px-5 shadow bg-navbar animate__animated animate__slideInDown">
+                    <div class="text-navtext text-2xl font-bold tracking-wide">PatrickG.</div>
+                    <div x-show="!open" class="text-navtext text-sm font-bold tracking-wide hidden md:block lg:block">
+                        <ul class="flex flex-row gap-6 cursor-pointer">
+                            <a href="#aboutme"
+                                class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                About me</a>
+                            <a href="#experience"
+                                class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Experience
+                            </a>
+                            <a href="#technical-skill"
+                                class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Skills
+                            </a>
+                            <a href="#projects"
+                                class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Project
+                            </a>
+                        </ul>
+                    </div>
+                    <div @click="open = ! open" class="block md:hidden lg:hidden cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div x-show="open" class="bg-white shadow-lg mt-12 py-4 px-4 shadow-md">
+                    <ul class="flex flex-col gap-3 font-bold">
+                        <li>
+                            <a href="#aboutme"
+                                class="text-gray-800 hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                About me</a>
+                        </li>
+                        <li>
+                            <a href="#experience"
+                                class="text-gray-800 hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Experience
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#technical-skill"
+                                class="text-gray-800 hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Skills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects"
+                                class="text-gray-800 hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Project
+                            </a>
+                        </li>
                     </ul>
+
                 </div>
             </div>
             <div class="flex flex-col gap-10 bg-gradient-to-r from-background1 to-background2 min-h-screen">
@@ -72,17 +111,17 @@
                         Hi There!
                     </div>
                     <div
-                        class="text-lg lg:text-3xl text-backgroundtitle font-bold animate__animated animate__backInLeft">
-                        Im <span class="text-xl lg:text-4xl text-backgroundname">Patrick Mahinay</span> from Caloocan
+                        class="text-md lg:text-3xl text-backgroundtitle font-bold animate__animated animate__backInLeft">
+                        Im <span class="text-lg lg:text-4xl text-backgroundname">Patrick Mahinay</span> from Caloocan
                         City.
                     </div>
                     <div class="flex flex-row gap-4 animate__animated animate__fadeIn">
-                        <div> <img class="h-8 w-9 lg:h-10 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
+                        <div> <img class="h-8 w-9 lg:h-9 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
                                 alt="linkedin" /></div>
-                        <div> <img class="h-8 w-9 lg:h-10 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
+                        <div> <img class="h-8 w-9 lg:h-9 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
                                 src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" /></div>
-                        <div> <img class="h-8 w-9 lg:h-10 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
+                        <div> <img class="h-8 w-9 lg:h-9 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
                                 src="https://static-00.iconduck.com/assets.00/gitlab-icon-2048x1885-1o0cwkbx.png"
                                 alt="React" /></div>
                     </div>
