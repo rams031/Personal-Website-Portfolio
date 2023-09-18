@@ -28,3 +28,9 @@
 2023-07-05 14:07:35 info: tempDirectory:c:\Users\Xypher Solutions Inc\.vscode\extensions\embold-vscode.embold-0.1.5\temp
 2023-07-05 14:07:35 info: Extraction complete for source: c:\Users\Xypher Solutions Inc\.vscode\extensions\embold-vscode.embold-0.1.5\resources\embold-scanner-archive.zip, destination: c:\Users\Xypher Solutions Inc\.vscode\extensions\embold-vscode.embold-0.1.5\temp
 2023-07-05 14:07:35 info: Congratulations, your extension "Embold" is now active!
+2023-07-05 15:36:38 info: file:///c%3A/Users/Xypher%20Solutions%20Inc/Web-Personal-Portfolio/.git/index.lock
+2023-07-05 15:36:38 error: SQLITE_ERROR: no such table: issues
+2023-07-05 15:36:46 info: file:///c%3A/Users/Xypher%20Solutions%20Inc/Web-Personal-Portfolio/.git/index.lock
+2023-07-05 15:36:46 error: SQLITE_ERROR: no such table: issues
+2023-07-05 15:39:42 info: file:///c%3A/Users/Xypher%20Solutions%20Inc/Web-Personal-Portfolio/.git/index.lock
+2023-07-05 15:39:42 error: SQLITE_ERROR: no such table: issues

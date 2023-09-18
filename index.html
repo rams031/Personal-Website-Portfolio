@@ -147,7 +147,7 @@
                     class="grow flex flex-col lg:flex-col gap-1 items-center justify-center animate__animated animate__fadeIn">
                     <div class="mx-10 flex flex-col gap-5 justify-center items-center">
                         <img class="z-0 bg-cover h-40 w-auto rounded-full shadow-lg" alt="Patrick Mahinay"
-                            src="https://res.cloudinary.com/ddr0lfrjj/image/upload/v1687833023/me_ged5tw.jpg" />
+                            src="./assets/personal-photo.jpg" />
                     </div>
                     <div
                         class="flex flex-col gap-2 text-md text-gray-600 font-medium px-10 lg:px-40 text-center rounded-lg p-5">
@@ -170,8 +170,7 @@
             <div class="flex flex-col min-h-screen rounded-lg bg-gray-50">
                 <div class="sticky top-0 z-20">
                     <blockquote>
-                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
-                        relative shadow-xl items-center inline-block rounded-lg py-3 px-36">
+                        <span class="bg-subnavcolor relative items-center inline-block shadow py-3 px-36">
                             <span class="relative text-subnavtext text-base lg:text-lg font-semibold">Skills</span>
                         </span>
                     </blockquote>
@@ -184,7 +183,8 @@
                         <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
                             <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
                                 src="https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_168875.png"
-                                alt="React" />
+                                alt="React" /> 
+                                <divider></divider>
                             <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">React / React
                                 Native</span>
                         </div>
@@ -342,29 +342,27 @@
         <!-- Projects  -->
         <section id="projects">
             <div class="min-h-screen">
-                <div>
-                    <blockquote>
+                <div class="flex justify-center">
+                    <div class="text-3xl text-gray-800 font-bold">Projects</div>
+                    <!-- <blockquote>
                         <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
                                 relative shadow-xl items-center inline-block rounded-lg py-3 px-36">
                             <span class="relative text-subnavtext text-base lg:text-lg font-semibold">Projects</span>
                         </span>
-                    </blockquote>
+                    </blockquote> -->
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-20 justify-center">
                     <div
-                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:shadow-md dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:shadow-md">
                         <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Covid App Ph
                         </h3>
                         <div class="flex flex-row h-40">
-                            <!-- <img class="object-scale-down rounded-md shadow"
-                                src="https://github.com/rams031/CovidSafePh-App/blob/master/components/test.jpg?raw=true"
-                                alt="first"> -->
                             <img class="object-scale-down rounded-md shadow"
                                 src="https://github.com/rams031/CovidSafePh-App/blob/master/components/test2.jpg?raw=true"
                                 alt="second">
                         </div>
                         <div>
-                            <p class="font-normal text-xs text-gray-700 dark:text-gray-400 pt-4"><span
+                            <p class="font-normal text-xs text-gray-800 pt-4"><span
                                     class="font-semibold">Personal Project.</span> This is a experimental app for
                                 tracking
                                 status of
@@ -396,8 +394,8 @@
                         </div>
                     </div>
                     <div
-                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Agency
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50">
+                        <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900">Agency
                             Scheduling System</h3>
                         <div class="h-40 flex justify-center">
                             <img class="object-cover rounded-md shadow"
@@ -405,7 +403,7 @@
                                 alt="first">
                         </div>
                         <div>
-                            <p class="font-normal text-xs text-gray-700 dark:text-gray-400 pt-4"><span
+                            <p class="font-normal text-xs text-gray-800 pt-4"><span
                                     class="font-semibold">Software Engineering
                                     Thesis.</span> This System is made for agency company Main Function is to provide
                                 schedule for
@@ -436,8 +434,8 @@
                         </div>
                     </div>
                     <div
-                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Agency
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50">
+                        <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900">Agency
                             Barangay Medical Inventory System</h3>
                         <div class="h-40 flex justify-center">
                             <img class="rounded-md shadow"
@@ -445,7 +443,7 @@
                                 alt="first">
                         </div>
                         <div>
-                            <p class="font-normal text-xs text-gray-700 dark:text-gray-400 pt-4"><span
+                            <p class="font-normal text-xs text-gray-800 pt-4"><span
                                     class="font-semibold">Inventory System.</span> The Main Purpose of this system is
                                 to provice exact data of exisiting medical inventory.</p>
                         </div>
