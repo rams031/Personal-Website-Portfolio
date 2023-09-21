@@ -1,89 +1,567 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en" class="scroll-smooth">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Mahinay</title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <link rel="icon" href="./assets/pg-logo.png" type="image/x-icon">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkslategray: '#005555',
+                        darkcyan: '#069A8E',
+                        powerblue: '#A1E3D8',
+                        navbar: "#f9fafb",
+                        navtext: "#333333",
+                        background1: "#e5e4df",
+                        background2: "#e5e4df",
+                        backgroundname: "black",
+                        backgroundtitle: "#333333",
+                        backgroundnamecolor: "#f9fafb",
+                        subnavcolor: "#333333",
+                        subnavtext: "#f9fafb"
+                    }
+                }
+            }
         }
-      });
     </script>
-  </body>
+
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="antialiased tracking-wide">
+        <!-- Navbar -->
+        <nav>
+            <div x-data="{ open: false }">
+                <div id="navbar"
+                    class="flex flex-row fixed z-50 inset-x-0 top-0 justify-between px-20 transition-[height] h-[50px] duration-300 overflow-hidden items-center px-5 shadow bg-navbar animate__animated animate__slideInDown">
+                    <div class="text-navtext text-2xl font-bold tracking-wide">PatrickG. 123</div>
+                    <div x-show="!open" class="text-navtext text-sm font-bold tracking-wide hidden md:block lg:block">
+                        <ul class="flex flex-row gap-6 cursor-pointer">
+                            <a href="#aboutme"
+                                class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                About me</a>
+                            <a href="#experience"
+                                class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Experience
+                            </a>
+                            <a href="#technical-skill"
+                                class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Skills
+                            </a>
+                            <a href="#projects"
+                                class="hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Project
+                            </a>
+                        </ul>
+                    </div>
+                    <div @click="open = ! open" class="block md:hidden lg:hidden cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div x-show="open" class="bg-white shadow-lg mt-12 py-4 px-4 shadow-md">
+                    <ul class="flex flex-col gap-3 font-bold">
+                        <li>
+                            <a href="#aboutme"
+                                class="text-gray-800 hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                About me</a>
+                        </li>
+                        <li>
+                            <a href="#experience"
+                                class="text-gray-800 hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Experience
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#technical-skill"
+                                class="text-gray-800 hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Skills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects"
+                                class="text-gray-800 hover:bg-navtext hover:text-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300">
+                                Project
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="flex flex-col gap-10 bg-gradient-to-r from-background1 to-background2 min-h-screen">
+                <div class="grow flex flex-col gap-5 justify-center items-center">
+                    <div class="text-3xl lg:text-6xl text-backgroundtitle font-bold animate__animated animate__bounce">
+                        Hi There!
+                    </div>
+                    <div
+                        class="text-md lg:text-3xl text-backgroundtitle font-bold animate__animated animate__backInLeft">
+                        Im <span class="text-lg lg:text-4xl text-backgroundname">Patrick Mahinay</span> from Caloocan
+                        City.
+                    </div>
+                    <div class="flex flex-row gap-4 animate__animated animate__fadeIn">
+                        <div> <img class="h-8 w-9 lg:h-9 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
+                                alt="linkedin" /></div>
+                        <div> <img class="h-8 w-9 lg:h-9 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
+                                src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" /></div>
+                        <div> <img class="h-8 w-9 lg:h-9 lg:w-13  grayscale hover:cursor-pointer hover:grayscale-0"
+                                src="https://static-00.iconduck.com/assets.00/gitlab-icon-2048x1885-1o0cwkbx.png"
+                                alt="React" /></div>
+                    </div>
+                    <div
+                        class="text-base lg:text-lg text-backgroundtitle p-5 rounded-md font-semibold animate__animated animate__backInLeft">
+                        <span class="tracking-wide bg-backgroundnamecolor px-5 py-4 rounded">Front End Developer</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- About Me  -->
+        <section id="aboutme">
+            <div class="flex flex-col bg-white min-h-screen">
+                <div class="sticky top-0 z-20">
+                    <blockquote>
+                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
+                        relative shadow-xl items-center inline-block rounded-lg py-3 px-36 ">
+                            <span class="relative text-subnavtext text-base lg:text-lg font-semibold">About Me</span>
+                        </span>
+                    </blockquote>
+                </div>
+                <div
+                    class="grow flex flex-col lg:flex-col gap-1 items-center justify-center animate__animated animate__fadeIn">
+                    <div class="mx-10 flex flex-col gap-5 justify-center items-center">
+                        <img class="z-0 bg-cover h-40 w-auto rounded-full shadow-lg" alt="Patrick Mahinay"
+                            src="./assets/personal-photo.jpg" />
+                    </div>
+                    <div
+                        class="flex flex-col gap-2 text-md text-gray-600 font-medium px-10 lg:px-40 text-center rounded-lg p-5">
+                        <p> My interest in designing and developing user
+                            interfaces is what drove
+                            me to be a <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-darkslategray
+                                  to-darkcyan">Front
+                                End
+                                Developer</span>. I have a basic understanding of color
+                            combinations, basic photo editing and I
+                            ensure
+                            to produce high-quality Websites with Responsive Web Design that can be accessed on any
+                            devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills  -->
+        <section id="technical-skill">
+            <div class="flex flex-col min-h-screen rounded-lg bg-gray-50">
+                <div class="sticky top-0 z-20">
+                    <blockquote>
+                        <span class="bg-subnavcolor relative items-center inline-block shadow py-3 px-36">
+                            <span class="relative text-subnavtext text-base lg:text-lg font-semibold">Skills</span>
+                        </span>
+                    </blockquote>
+                </div>
+                <div
+                    class="bg-gray-200 bg-opacity-0 grow flex flex-col gap-4 bg-white rounded-lg shadow-sm text-left px-10 py-10 animate__animated animate__fadeIn">
+                    <div class="text-xl lg:text-2xl text-gray-900 font-bold p-2 rounded">
+                        Front End Development</div>
+                    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_168875.png"
+                                alt="React" /> 
+                                <divider></divider>
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">React / React
+                                Native</span>
+                        </div>
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://icons-for-free.com/iconfiles/png/512/vscode+icons+type+tailwind-1324451500323172563.png"
+                                alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Tailwind CSS</span>
+                        </div>
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-svg-vector.svg"
+                                alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Angular JS</span>
+                        </div>
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">HTML 5</span>
+                        </div>
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+                                alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Typescript</span></span>
+                        </div>
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Bootstrap</span></span>
+                        </div>
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://mui.com/static/logo.png" alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Material UI</span></span>
+                        </div>
+                        <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://w7.pngwing.com/pngs/413/852/png-transparent-redux-react-logo-javascript-dq-purple-violet-text-thumbnail.png"
+                                alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Redux</span></span>
+                        </div>
+                    </div>
+
+                    <div class="text-xl lg:text-2xl text-gray-900 font-bold px-2 pt-4 pb-2 rounded">
+                        Back End Development
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://logowik.com/content/uploads/images/mysql8604.logowik.com.webp"
+                                alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">MySql</span>
+                        </div>
+                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://www.svgrepo.com/show/331488/mongodb.svg" alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">MongoDB
+                                <small>(Basics)</small></span>
+                        </div>
+                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+                                alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Nodejs
+                                <small>(Basics)</small></span>
+                        </div>
+                    </div>
+                    <div class="text-xl lg:text-2xl text-gray-900 font-bold p-2 rounded">
+                        Other Tools</div>
+                    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Linux</span>
+                        </div>
+                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Git</span>
+                        </div>
+                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://yt3.googleusercontent.com/iD0oePTGV8tZwEEP_WEG2rvyNiQAVfmjhawFMCj17ARjjmw-J70k9NDjSE5QTzD9Vk3ayBU=s900-c-k-c0x00ffffff-no-rj"
+                                alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Cypress</span>
+                        </div>
+                        <div class="flex grid-col-1 items-center p-2 text-base font-normal text-gray-900 rounded-lg">
+                            <img class="h-8 w-8 lg:h-10 lg:w-10 cursor-pointer hover:grayscale"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Circleci-icon-logo.svg/1200px-Circleci-icon-logo.svg.png"
+                                alt="React" />
+                            <span class="ml-3 text-gray-800 text-xs lg:text-sm font-semibold">Circle CI</span>
+                        </div>
+                    </div>
+        </section>
+        <!-- Work Experience  -->
+        <section id="experience">
+            <div class="min-h-screen">
+                <div class="sticky top-0 z-20">
+                    <blockquote>
+                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
+                                relative shadow-xl items-center inline-block rounded-lg py-3 px-36">
+                            <span class="relative text-subnavtext text-base lg:text-lg font-semibold">Work
+                                Experience</span>
+                        </span>
+                    </blockquote>
+                </div>
+                <div class="flex flex-col px-5 lg:px-20 py-5 animate__animated animate__fadeIn">
+                    <div class="flex flex-col bg-white rounded-lg text-left gap-3 p-5">
+                        <div class="text-lg text-gray-900 font-bold">Xypher Solutions Inc <small class="text-lg">(Quezon
+                                City)</small></div>
+                        <div class="text-md font-semibold text-gray-800">Junior Front End Developer </div>
+                        <div class="bg-gray-50 rounded-md p-5 text-gray-800">
+                            <ul>
+                                <li class="text-sm"> - Performed code optimization and maintained code quality.</li>
+                                <li class="text-sm"> - Performed code standard and code based architecture.</li>
+                                <li class="text-sm"> - Performed UI Design and Frontend development.</li>
+                                <li class="text-sm"> - Experience working on agile-oriented environment.</li>
+                                <li class="text-gray-800 font-semibold mt-2 text-sm"> Tech Stack: React JS, React
+                                    Native, JavaScript,
+                                    Redux,
+                                    Tailwind
+                                    CSS,
+                                    Node JS.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white rounded-lg text-left p-5 gap-3">
+                        <div class="text-xl text-gray-900 font-bold">You Source Inc <small class="text-lg">(Makati
+                                City)</small></div>
+                        <div class="text-md font-semibold text-gray-800">Software Engineer Intern</div>
+                        <div class="bg-gray-50 rounded-md p-5 text-gray-800">
+                            <ul>
+                                <li class="text-sm">- Worked with a team of software developers responsible for
+                                    designing, programming
+                                    and
+                                    unit testing.</li>
+                                <li class="text-sm">- Develop a series of html form that stores information of a end
+                                    user on a web
+                                    server.
+                                </li>
+                                <li class="text-sm">- Performed Unit testing during the development of an application.
+                                </li>
+                                <li class="text-sm">- Experience working in an agile-oriented environment.</li>
+                                <li class="text-gray-800 font-semibold text-sm mt-2">Tech Stack: AngularJS,
+                                    Typescript,Coffee
+                                    Script,
+                                    HTML, CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects  -->
+        <section id="projects">
+            <div class="min-h-screen">
+                <div class="flex justify-center">
+                    <div class="text-3xl text-gray-800 font-bold">Projects</div>
+                    <!-- <blockquote>
+                        <span class="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-subnavcolor
+                                relative shadow-xl items-center inline-block rounded-lg py-3 px-36">
+                            <span class="relative text-subnavtext text-base lg:text-lg font-semibold">Projects</span>
+                        </span>
+                    </blockquote> -->
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-20 justify-center">
+                    <div
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:shadow-md">
+                        <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">Covid App Ph
+                        </h3>
+                        <div class="flex flex-row h-40">
+                            <img class="object-scale-down rounded-md shadow"
+                                src="https://github.com/rams031/CovidSafePh-App/blob/master/components/test2.jpg?raw=true"
+                                alt="second">
+                        </div>
+                        <div>
+                            <p class="font-normal text-xs text-gray-800 pt-4"><span
+                                    class="font-semibold">Personal Project.</span> This is a experimental app for
+                                tracking
+                                status of
+                                COVID-19 pandemic with news feature and health reminders.
+                            </p>
+                        </div>
+                        <div class="py-2">
+                            <div class="flex flex-col gap-2 py-2">
+                                <div class="font-semibold text-xs">Tech Stack : </div>
+                                <div class="flex flex-row gap-2">
+                                    <div> <img class="h-6 w-6 cursor-pointer hover:grayscale"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+                                            alt="React" />
+                                    </div>
+                                    <div>
+                                        <img class="h-6 w-6 cursor-pointer hover:grayscale"
+                                            src="https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_168875.png"
+                                            alt="Typescript" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="font-semibold text-xs pb-1">Available at:</div>
+                                <a href="https://apps.samsung.com/appquery/appDetail.as?appId=testapp.CovidSafePh"
+                                    class=" bg-gray-50 p-2 rounded-full font-semibold text-xs"><span class="font-semibold text-transparent bg-clip-text bg-gradient-to-br from-[#d108d3]
+                                    to-[#f76150]">Samsung Galaxy Store Link</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50">
+                        <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900">Agency
+                            Scheduling System</h3>
+                        <div class="h-40 flex justify-center">
+                            <img class="object-cover rounded-md shadow"
+                                src="https://github.com/rams031/Agency-Scheduling-System-with-Email-Updates-/blob/master/assets/images/display1.png?raw=true"
+                                alt="first">
+                        </div>
+                        <div>
+                            <p class="font-normal text-xs text-gray-800 pt-4"><span
+                                    class="font-semibold">Software Engineering
+                                    Thesis.</span> This System is made for agency company Main Function is to provide
+                                schedule for
+                                multiple applicant with email function to keep applicant updated</p>
+                        </div>
+                        <div>
+                            <div class="flex flex-col gap-2 py-2">
+                                <div class="font-semibold text-xs">Tech Stack : </div>
+                                <div class="flex flex-row gap-2">
+                                    <div> <img class="h-6 w-6 cursor-pointer hover:grayscale"
+                                            src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" alt="PHP" />
+                                    </div>
+                                    <div>
+                                        <img class="h-6 w-6 cursor-pointer hover:grayscale"
+                                            src="https://logowik.com/content/uploads/images/mysql8604.logowik.com.webp"
+                                            alt="Mysql" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-xs pb-1">Available at:</div>
+                                <a href="https://github.com/rams031/Agency-Scheduling-System-with-Email-Updates-"
+                                    class=" bg-gray-50 p-2 rounded-full font-semibold text-xs flex flex-row items-center gap-2">
+                                    <img class="h-4 w-4 grayscale hover:cursor-pointer hover:grayscale-0"
+                                        src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" />
+                                    <span class="font-semibold">Github Link</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-50">
+                        <h3 class="mb-2 text-sm font-bold tracking-tight text-gray-900">Agency
+                            Barangay Medical Inventory System</h3>
+                        <div class="h-40 flex justify-center">
+                            <img class="rounded-md shadow"
+                                src="https://res.cloudinary.com/ddr0lfrjj/image/upload/v1687851761/barangay1_qfapre.png"
+                                alt="first">
+                        </div>
+                        <div>
+                            <p class="font-normal text-xs text-gray-800 pt-4"><span
+                                    class="font-semibold">Inventory System.</span> The Main Purpose of this system is
+                                to provice exact data of exisiting medical inventory.</p>
+                        </div>
+                        <div class="py-2">
+                            <div class="flex flex-col gap-2 py-2">
+                                <div class="font-semibold text-xs">Tech Stack : </div>
+                                <div class="flex flex-row gap-2">
+                                    <div> <img class="h-6 w-6 cursor-pointer hover:grayscale"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+                                            alt="React" />
+                                    </div>
+                                    <div>
+                                        <img class="h-6 w-6 cursor-pointer hover:grayscale"
+                                            src="https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_168875.png"
+                                            alt="Typescript" />
+                                    </div>
+                                    <div>
+                                        <img class="h-6 w-6 cursor-pointer hover:grayscale"
+                                            src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+                                            alt="NodeJs" />
+                                    </div>
+                                    <div>
+                                        <img class="h-6 w-6 cursor-pointer hover:grayscale"
+                                            src="https://logowik.com/content/uploads/images/mysql8604.logowik.com.webp"
+                                            alt="Mysql" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-xs pb-1">Available at:</div>
+                                <a href="https://github.com/rams031/med-inventory-system-prod"
+                                    class=" bg-gray-50 p-2 rounded-full font-semibold text-xs flex flex-row items-center gap-2">
+                                    <img class="h-4 w-4 grayscale hover:cursor-pointer hover:grayscale-0"
+                                        src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github" />
+                                    <span class="font-semibold">Github Link</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact  -->
+        <section id="contact">
+            <div
+                class="min-h-screen flex flex-col justify-center items-center gap-5 border-t-2 border-dashed bg-gray-100">
+                <div class="text-center pb-10">
+                    <div class="font-bold text-2xl">Contact Me</div>
+                    <div class="font-medium text-md">Get in touch</div>
+                    <div> </div>
+                </div>
+                <div class="flex flex-col items-center gap-5 text-left">
+                    <div class="w-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                            stroke="currentColor" className="w-15 h-20">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="font-semibold">Email</div>
+                        <div>Patrickmahinay031@gmail.com</div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center gap-5">
+                    <div class="w-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                            stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="font-semibold">Contact</div>
+                        <div>+639951373988</div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center gap-5">
+                    <div class="w-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                            stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="font-semibold">Located</div>
+                        <div>Caloocan City</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
 </html>
+
+<script>
+    var scrollView = 0;
+
+    window.onscroll = function () {
+        console.log("window.pageYOffset", window.pageYOffset)
+        if (scrollView > window.pageYOffset && window.pageYOffset < 550) {
+            console.log("scrolling up");
+            document.getElementById("navbar").style.height = "50px"
+        } else if (scrollView < window.pageYOffset) {
+            console.log("scrolling down");
+            document.getElementById("navbar").style.height = "0"
+        }
+        return scrollView = window.pageYOffset
+    };
+
+    function load() {
+        alert("Page is loaded");
+    }
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) return document.getElementById("navbar").style.display = "none";
+        return document.getElementById("navbar").style.display = "flex";
+    }
+</script>
