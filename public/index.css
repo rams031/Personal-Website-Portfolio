@@ -18,6 +18,10 @@
         @apply hover: bg-white hover:px-3 hover:rounded-md hover:peer-placeholder-shown\:scale-100 duration-300;
     }
 
+    .width-apply {
+        @apply max-w-5xl mx-auto;
+    }
+
     .skill-image {
         @apply h-10 w-15;
     }
